@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink font-sans antialiased;
+}
+
+::selection {
+  background-color: #f7c9cb;
+  color: #111111;
+}
+
+.container-x {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.pill {
+  @apply inline-flex items-center gap-2 rounded-full bg-surface-tint px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all duration-200 active:scale-[0.98];
+}
+
+.btn-primary {
+  @apply btn bg-brand text-white shadow-card hover:bg-brand-dark;
+}
+
+.btn-outline {
+  @apply btn border border-line bg-white text-ink hover:border-brand hover:text-brand;
+}
+
+.btn-whatsapp {
+  @apply btn bg-whatsapp text-white hover:brightness-95;
+}
+
+.section-label {
+  @apply pill;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-card;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
