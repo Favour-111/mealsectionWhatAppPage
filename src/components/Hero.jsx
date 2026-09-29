@@ -1,6 +1,6 @@
 import { Smartphone, Truck, Zap } from 'lucide-react'
 import { WHATSAPP_MESSAGES, buildWhatsAppLink } from '../config/site'
-import heroPlate from '../assets/images/hero-plate-cutout.webp'
+import heroPlate from '../assets/images/hero-plate-cutout1.png'
 import WhatsAppIcon from './icons/WhatsAppIcon'
 
 const benefits = [
@@ -40,7 +40,7 @@ export default function Hero() {
               Order on WhatsApp
             </a>
             <a href="#app" className="btn-outline">
-              Coming Soon — Get the App
+              Coming Soon Get the App
             </a>
           </div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
 
           <img
             src={heroPlate}
-            alt="Jollof rice and grilled chicken with a fresh side salad — a MealSection campus meal"
+            alt="Jollof rice and grilled chicken with a fresh side salad a MealSection campus meal"
             className="relative w-full max-w-[440px] animate-float-slow drop-shadow-[0_30px_40px_rgba(17,17,17,0.28)] sm:max-w-[520px]"
           />
         </div>

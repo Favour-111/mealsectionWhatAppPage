@@ -1,4 +1,4 @@
-// Centralized site configuration — update the WhatsApp number here and everywhere updates.
+// Centralized site configuration update the WhatsApp number here and everywhere updates.
 export const WHATSAPP_NUMBER = '2347013234960'
 
 export const WHATSAPP_MESSAGES = {
