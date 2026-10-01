@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { WHATSAPP_MESSAGES, buildWhatsAppLink } from '../config/site'
 import ctaBackground from '../assets/images/cta-background.jpg'
 import WhatsAppIcon from './icons/WhatsAppIcon'
+import Reveal from './Reveal'
 
 export default function FinalCTA() {
   return (
@@ -11,7 +12,7 @@ export default function FinalCTA() {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-brand/95 via-ink/80 to-ink/90" />
 
-      <div className="container-x relative text-center">
+      <Reveal className="container-x relative text-center" duration={0.9}>
         <h2 className="mx-auto max-w-2xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
           Your Next Meal Is Just a Message Away.
         </h2>
@@ -34,7 +35,7 @@ export default function FinalCTA() {
             Learn About the App
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

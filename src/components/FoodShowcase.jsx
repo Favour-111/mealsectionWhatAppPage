@@ -1,4 +1,5 @@
 import { MapPin } from 'lucide-react'
+import Reveal from './Reveal'
 import jollofChicken from '../assets/images/food/jollof-chicken.jpg'
 import shawarma from '../assets/images/food/shawarma.jpg'
 import friedRice from '../assets/images/food/fried-rice.jpg'
@@ -19,7 +20,7 @@ export default function FoodShowcase() {
   return (
     <section id="food" className="bg-white py-20 sm:py-28">
       <div className="container-x">
-        <div className="flex flex-wrap items-end justify-between gap-4">
+        <Reveal className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <span className="pill">Food Showcase</span>
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
@@ -29,14 +30,12 @@ export default function FoodShowcase() {
               From quick bites to full meals, discover what your campus has to offer.
             </p>
           </div>
-        </div>
+        </Reveal>
 
         <div className="mt-12 flex snap-x gap-5 overflow-x-auto pb-4 lg:grid lg:grid-cols-6 lg:overflow-visible">
-          {foods.map((food) => (
-            <div
-              key={food.name}
-              className="card-hover group w-[210px] shrink-0 snap-start overflow-hidden rounded-2xl border border-line bg-white shadow-soft lg:w-auto"
-            >
+          {foods.map((food, i) => (
+            <Reveal key={food.name} direction="zoom" delay={i * 0.08} className="w-[210px] shrink-0 snap-start lg:w-auto">
+            <div className="card-hover group h-full overflow-hidden rounded-2xl border border-line bg-white shadow-soft">
               <div className="aspect-square overflow-hidden">
                 <img
                   src={food.image}
@@ -57,6 +56,7 @@ export default function FoodShowcase() {
                 </div>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>

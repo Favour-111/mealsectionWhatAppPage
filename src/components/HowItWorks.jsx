@@ -1,11 +1,13 @@
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { WHATSAPP_MESSAGES, buildWhatsAppLink } from '../config/site'
 import WhatsAppIcon from './icons/WhatsAppIcon'
+import Reveal from './Reveal'
 
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-surface-tint py-20 sm:py-28">
       <div className="container-x">
+        <Reveal>
         <span className="pill">How to Order</span>
         <h2 className="mt-5 max-w-lg text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
           Want Food Now?
@@ -19,6 +21,7 @@ export default function HowItWorks() {
           Start My Order
           <ArrowRight size={16} />
         </a>
+        </Reveal>
 
         <div className="relative mt-14 grid gap-6 lg:grid-cols-3 lg:gap-8">
           <div className="pointer-events-none absolute left-0 right-0 top-[38px] hidden justify-between px-[16%] lg:flex">
@@ -26,7 +29,7 @@ export default function HowItWorks() {
             <ArrowRight className="text-brand/30" size={28} />
           </div>
 
-          <div className="relative rounded-2xl border border-line bg-white p-7 shadow-soft">
+          <Reveal delay={0.0} direction="up" className="relative rounded-2xl border border-line bg-white p-7 shadow-soft">
             <span className="absolute -top-4 left-7 grid h-8 w-8 place-items-center rounded-full bg-brand text-xs font-bold text-white">
               01
             </span>
@@ -39,9 +42,9 @@ export default function HowItWorks() {
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
               Tap the &ldquo;Order on WhatsApp&rdquo; button.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="relative rounded-2xl border border-line bg-white p-7 shadow-soft">
+          <Reveal delay={0.15} direction="up" className="relative rounded-2xl border border-line bg-white p-7 shadow-soft">
             <span className="absolute -top-4 left-7 grid h-8 w-8 place-items-center rounded-full bg-brand text-xs font-bold text-white">
               02
             </span>
@@ -62,9 +65,9 @@ export default function HowItWorks() {
                 <span className="font-semibold">Hostel A</span>
               </p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="relative rounded-2xl border border-line bg-white p-7 shadow-soft">
+          <Reveal delay={0.3} direction="up" className="relative rounded-2xl border border-line bg-white p-7 shadow-soft">
             <span className="absolute -top-4 left-7 grid h-8 w-8 place-items-center rounded-full bg-brand text-xs font-bold text-white">
               03
             </span>
@@ -77,7 +80,7 @@ export default function HowItWorks() {
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
               We&rsquo;ll confirm your order, payment and delivery details.
             </p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

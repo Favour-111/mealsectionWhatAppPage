@@ -2,6 +2,7 @@ import { Smartphone, Truck, Zap } from 'lucide-react'
 import { WHATSAPP_MESSAGES, buildWhatsAppLink } from '../config/site'
 import heroPlate from '../assets/images/hero-plate-cutout1.png'
 import WhatsAppIcon from './icons/WhatsAppIcon'
+import Reveal from './Reveal'
 
 const benefits = [
   { icon: Smartphone, label: 'Order directly from your phone' },
@@ -45,13 +46,13 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
-            {benefits.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2.5">
+            {benefits.map(({ icon: Icon, label }, i) => (
+              <Reveal key={label} delay={0.5 + i * 0.12} className="flex items-center gap-2.5">
                 <span className="grid h-8 w-8 place-items-center rounded-full bg-surface-tint text-brand">
                   <Icon size={15} />
                 </span>
                 <span className="text-sm font-medium text-ink-soft">{label}</span>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

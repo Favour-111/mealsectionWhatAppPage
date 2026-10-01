@@ -2,6 +2,7 @@ import { CheckCircle2 } from 'lucide-react'
 import appDevices from '../assets/images/app-devices.png'
 import appleLogo from '../assets/images/icons/apple-logo.png'
 import playstoreLogo from '../assets/images/icons/playstore-logo.png'
+import Reveal from './Reveal'
 
 const checklist = [
   'Discover campus vendors',
@@ -15,7 +16,7 @@ export default function AppComingSoon() {
     <section id="app" className="bg-gradient-to-b from-surface-tint to-white py-20 sm:py-28">
       <div className="container-x">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
+          <Reveal direction="left">
             <span className="pill">Coming Soon</span>
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
               The MealSection App Is Coming.
@@ -26,27 +27,27 @@ export default function AppComingSoon() {
             </p>
 
             <ul className="mt-8 space-y-3">
-              {checklist.map((item) => (
-                <li key={item} className="flex items-center gap-3">
+              {checklist.map((item, i) => (
+                <Reveal as="li" key={item} direction="left" delay={0.3 + i * 0.1} className="flex items-center gap-3">
                   <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand text-white">
                     <CheckCircle2 size={14} />
                   </span>
                   <span className="text-sm font-medium text-ink">{item}</span>
-                </li>
+                </Reveal>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="relative">
+          <Reveal direction="right" duration={0.9} className="relative">
             <img
               src={appDevices}
               alt="MealSection mobile app screens showing home, order tracking and delivery status"
-              className="w-full rounded-[2rem] shadow-card"
+              className="w-full animate-float-slow rounded-[2rem] shadow-card"
             />
-          </div>
+          </Reveal>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-6 rounded-2xl bg-ink px-7 py-8 sm:flex-row sm:px-10">
+        <Reveal className="mt-14 flex flex-col items-center justify-between gap-6 rounded-2xl bg-ink px-7 py-8 sm:flex-row sm:px-10">
           <div>
             <h3 className="text-lg font-bold text-white">Coming Soon on Your Phone.</h3>
             <p className="mt-1 text-sm text-white/60">
@@ -75,7 +76,7 @@ export default function AppComingSoon() {
               </span>
             </button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
