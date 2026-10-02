@@ -66,6 +66,21 @@ export default function Hero() {
           </div>
 
           <div className="pointer-events-none absolute -inset-2 rounded-full bg-brand-bright/10 blur-2xl" />
+          <div className="pointer-events-none absolute inset-0 m-auto h-[85%] w-[85%] animate-blob bg-gradient-to-br from-brand-bright/25 to-brand/10" />
+          <div className="pointer-events-none absolute -right-2 bottom-4 hidden h-20 w-20 animate-blob bg-brand-bright/20 [animation-delay:-4s] sm:block" />
+
+          <div className="absolute -bottom-6 left-1/2 z-10 w-[92%] max-w-md -translate-x-1/2 sm:-bottom-8">
+            <div className="animate-bounce-soft">
+              <div className="flex items-center gap-4 rounded-3xl bg-brand px-5 py-4 text-white shadow-[0_20px_40px_rgba(17,17,17,0.3)] ring-4 ring-white sm:gap-5 sm:px-7 sm:py-5">
+                <span className="text-4xl sm:text-5xl">🥖</span>
+                <p className="text-base font-extrabold leading-tight sm:text-xl">
+                  MealSection is supplying
+                  <br />
+                  <span className="text-yellow-300">Shawarma Bread!</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
           <img
             src={heroPlate}
